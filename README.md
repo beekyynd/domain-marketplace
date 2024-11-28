@@ -1,66 +1,32 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![Screenshot 2024-11-28 09 58 37](https://github.com/user-attachments/assets/717f73e8-3acd-4fc1-bff8-b60117c7f3a0)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Domain Marketplace is a Laravel and LiveWire Web Application that allows domain owners to sell their brand names to potential buyers. The process is smooth and easy with a sleek looking user interface and dashboard.
 
-## About Laravel
+![Screenshot 2024-11-28 09 58 59](https://github.com/user-attachments/assets/e63830cd-b445-467b-b8d9-f04bd3c99a4f)
+![Screenshot 2024-11-28 09 59 13](https://github.com/user-attachments/assets/36daaf54-6954-4be5-baad-51a395a4ddcd)
+![Screenshot 2024-11-28 09 59 31](https://github.com/user-attachments/assets/78b2a408-e1d4-43db-afbe-6ed884eade43)
+![Screenshot 2024-11-28 09 59 56](https://github.com/user-attachments/assets/292c1c81-503a-42ae-81c0-0567bec4dae1)
+![Screenshot 2024-11-28 10 00 22](https://github.com/user-attachments/assets/d6fd1f67-29b1-44cf-b7de-82d2ab20f7ef)
+![Screenshot 2024-11-28 10 00 37](https://github.com/user-attachments/assets/955921b4-291a-4006-9d60-c26e42103c45)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<strong>Feature of Domain Marketplace:</strong>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![Screenshot 2024-11-20 18 37 30](https://github.com/user-attachments/assets/cfa424db-4366-442c-8b3d-709ab11c2a6b)
+![Screenshot 2024-11-20 18 38 38](https://github.com/user-attachments/assets/4575e77a-af29-43a9-8990-66989ff2a6b4)
+![Screenshot 2024-11-20 18 39 15](https://github.com/user-attachments/assets/9a17711d-4a5e-4d77-9df6-aff552ed45d1)
+![Screenshot 2024-11-20 18 39 39](https://github.com/user-attachments/assets/2a56bc9e-8df8-4ef7-92cc-79ff98257d7d)
+![Screenshot 2024-11-20 18 39 54](https://github.com/user-attachments/assets/d1c047e6-7605-4de2-9a0e-bf198d7dcf9f)
+![Screenshot 2024-11-20 18 40 43](https://github.com/user-attachments/assets/88f96cd6-7357-4984-b84e-bbfe59ec654e)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<ul>
+    <li>Built with Bootstrap 5 and Tailwind CSS (for the user dashboard)</li>
+    <li>Domain buyers can easily search and find brand names to buy</li>
+    <li>Buyers can find domain names based on various industries</li>
+    <li>Sellers can easily create an account and add a domain name</li>
+    <li>Sellers can seamlessly search and filter domains with the help of LiveWire</li>
+    <li>Sellers can set a fixed price for thier domain along with other parameters</li>
+    <li>Sellers have a stunning dashboard that tracks and shows all the needed information</li>
+    <li>The dashboard comes with dark mode compatibility</li>
+</ul>
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<strong>PS: Some features like payment gateway, admin panel, and domain verification was intentionally removed</strong>
