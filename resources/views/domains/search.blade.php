@@ -10,9 +10,9 @@
 
 <div class="to-indus-content mx-auto">
 
-<h3 class="mt-3 mb-3 text-center">Find the best <span class="text-capitalize text-light">{{ $tag }}</span> domain for your brand</h3>
+<h3 class="mt-3 mb-3 text-center">Search Results for <span class="text-capitalize text-light">{{ $search }}</span></h3>
 
-<h6 class="mt-3 mb-3">Here, you will find all domain names listed under the <span class="text-capitalize">{{ $tag }}</span> industry that you can use to claim your space in the digital world</h6>
+<h6 class="mt-3 mb-3">Here, you will find all domain names that match your query</h6>
 
 </div>
 
@@ -28,11 +28,11 @@
 
 <div class="row row-35 p-m-p">
 
-<h6 class="text-bl mb-5">Showing {{ $count }} Brand Names in the <span class="text-capitalize">{{ $tag }} Industry</span></h6>
+<h6 class="text-bl mb-5">Showing {{ $domains->count() }} Brand Names from search result</h6>
         
 <!-- Domain box -->
 
-@forelse ($domains as $result )
+@foreach ($domains as $result )
 
 <div class="col-lg-3 col-md-3 col-6">
 
@@ -68,11 +68,7 @@
 
 </div>
 
-@empty
-
-<h6 class="text-center text-dark">Sorry, no domain is listed under this industry yet</h6>
-
-@endforelse
+@endforeach
 
 
 <!-- END -->

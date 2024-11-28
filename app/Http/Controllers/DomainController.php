@@ -21,7 +21,7 @@ class DomainController extends Controller
        
         $domains = Domain::all(); 
  
-        return view('welcome', compact('domains'));
+        return view('index', compact('domains'));
 
     }
 
@@ -36,7 +36,7 @@ class DomainController extends Controller
 
         $stats = Domain::where('id',$userid)->get(); // get domains associated with user
 
-        return view('dashboard', compact('stats'));
+        return view('dashboard.overview', compact('stats'));
      }
 
     /**
@@ -75,6 +75,37 @@ class DomainController extends Controller
         return view('domains.show', compact('domain'));
 
     }
+
+    /**
+     * Display domains from search
+     */
+
+     public function search(Request $request)
+     {
+
+         $search = $request->query('search');
+
+         if (empty($search)) {
+
+            abort(403);
+         }
+
+         $request->validate([
+
+            'search' => 'required|string|max:7',
+         ],
+         [
+            'search.max' => 'Sorry! You can only enter a string of 7 characters',
+         ]
+         
+         );
+ 
+         $domains = Domain::where('url', 'like', '%' . $search . '%')->get(); 
+ 
+         return view('domains.search', compact('domains', 'search'));
+ 
+     }
+ 
 
     /**
      * Show the form for editing the specified resource.

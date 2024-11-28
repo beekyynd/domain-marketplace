@@ -17,7 +17,7 @@
 
 <div class="t-space wdth-50 mx-auto">
 
-    <form method="get" action="domains.php">
+    <form method="get" action="{{ route('domain.search') }}">
 
 <div class="input-group mb-30">
 
@@ -27,7 +27,14 @@
 
 </div>
 
-    </form>
+  </form>
+
+  @if ($errors->has('search'))
+
+  <h6 class="mt-3 mb-3"><i>{{ $errors->first('search') }}</i></h6>
+
+  @endif
+
 
 </div>
 

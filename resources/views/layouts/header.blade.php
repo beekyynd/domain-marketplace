@@ -62,7 +62,7 @@ document.documentElement.scrollTop = 0; // CHROME, IE AND FIREFOX
 
 <div class="container-fluid">
 
-<a class="navbar-brand" href="{{route('welcome')}}"><img src="{{asset('images/g4.png')}}" class="logo-image"></a>
+<a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/g4.png')}}" class="logo-image"></a>
 
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -72,7 +72,7 @@ document.documentElement.scrollTop = 0; // CHROME, IE AND FIREFOX
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-<form class="d-flex mt-2" role="search" method="get" action="#">
+<form class="d-flex mt-2" role="search" method="get" action="{{ route('domain.search') }}">
 
 <input class="form-control me-2" name="search" type="search" placeholder="Type keyword" aria-label="Search">
 
@@ -84,13 +84,13 @@ document.documentElement.scrollTop = 0; // CHROME, IE AND FIREFOX
 
 <li class="nav-item ms-3">
 
-<a class="nav-link" aria-current="page" href="{{route('welcome')}}/login">Login</a>
+<a class="nav-link" aria-current="page" href="{{route('index')}}/login">Login</a>
 
 </li>
 
 <li class="nav-item ms-3">
 
-<a class="nav-link" href="{{route('welcome')}}/register">Become a Seller</a>
+<a class="nav-link" href="{{route('index')}}/register">Become a Seller</a>
 
 </li>
 

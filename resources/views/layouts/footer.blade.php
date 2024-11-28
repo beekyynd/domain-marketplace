@@ -32,7 +32,7 @@
 
 <ul class="c-list">
 
-<li><a href="about-us.php" class="text-muted">About us</a></li>
+<li><a href="#" class="text-muted">About us</a></li>
 
 <li><a href="#" class="text-muted">Contact us</a></li>
 
