@@ -9,7 +9,7 @@ Domain Marketplace is a Laravel and LiveWire Web Application that allows domain 
 ![Screenshot 2024-11-28 10 00 22](https://github.com/user-attachments/assets/d6fd1f67-29b1-44cf-b7de-82d2ab20f7ef)
 ![Screenshot 2024-11-28 10 00 37](https://github.com/user-attachments/assets/955921b4-291a-4006-9d60-c26e42103c45)
 
-<strong>Feature of Domain Marketplace:</strong>
+<strong>Features of Domain Marketplace:</strong>
 
 ![Screenshot 2024-11-20 18 37 30](https://github.com/user-attachments/assets/cfa424db-4366-442c-8b3d-709ab11c2a6b)
 ![Screenshot 2024-11-20 18 38 38](https://github.com/user-attachments/assets/4575e77a-af29-43a9-8990-66989ff2a6b4)
