@@ -73,11 +73,13 @@ Add Domain
 
     <option value="" disabled selected>--Filters--</option>
 
-    <option value="setup">Pending</option>
+    <option value="pending">Pending</option>
 
     <option value="sold">Sold</option>
 
     <option value="available">Available</option>
+
+    <option value="suspended">Suspended</option>
 
 </select>
 

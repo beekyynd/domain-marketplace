@@ -26,7 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
  
-    Route::get('dashboard', [DomainController::class, 'dashboard'])->name('overview');
+    Route::get('dashboard', [DomainController::class, 'dashboard'])->name('dashboard');
 
     Route::get('dashboard/domains/{domain:url}', [DomainController::class, 'edit'])->name('domains.edit');
 

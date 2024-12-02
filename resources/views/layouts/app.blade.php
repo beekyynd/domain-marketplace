@@ -49,6 +49,12 @@
 
 {{ $slot }}
 
+<div class='text-gray-800 dark:text-white border-t-2 border-gray-100 dark:border-gray-800 py-4 px-4'>
+
+<h6 class="text-center text-sm">&copy; 2024 Domainer Marketplace. All rights reserved</h6>
+    
+</div>
+
 </main>
 </div>
 </body>
