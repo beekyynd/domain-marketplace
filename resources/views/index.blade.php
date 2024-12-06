@@ -89,7 +89,7 @@
 
 <div class="row row-35 p-m-p">
 
-@foreach ($domains as $domain )
+@foreach ($domains->slice(0, 4) as $domain )
     
 <div class="col-lg-3 col-md-4 col-6">
 
