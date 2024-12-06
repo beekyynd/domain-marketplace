@@ -1,27 +1,23 @@
-![Screenshot 2024-11-28 09 58 37](https://github.com/user-attachments/assets/717f73e8-3acd-4fc1-bff8-b60117c7f3a0)
+![Screenshot 2024-12-06 22 51 42](https://github.com/user-attachments/assets/852c0f6d-bd29-45d8-8466-92395e9836b3)
 
 Domain Marketplace is a Laravel and LiveWire Web Application that allows domain owners to sell their brand names to potential buyers. The process is smooth and easy with a sleek looking user interface and dashboard.
 
-![Screenshot 2024-11-28 09 58 59](https://github.com/user-attachments/assets/e63830cd-b445-467b-b8d9-f04bd3c99a4f)
-![Screenshot 2024-11-28 09 59 13](https://github.com/user-attachments/assets/36daaf54-6954-4be5-baad-51a395a4ddcd)
-![Screenshot 2024-11-28 09 59 31](https://github.com/user-attachments/assets/78b2a408-e1d4-43db-afbe-6ed884eade43)
-![Screenshot 2024-11-28 09 59 56](https://github.com/user-attachments/assets/292c1c81-503a-42ae-81c0-0567bec4dae1)
-![Screenshot 2024-11-28 10 00 22](https://github.com/user-attachments/assets/d6fd1f67-29b1-44cf-b7de-82d2ab20f7ef)
-![Screenshot 2024-11-28 10 00 37](https://github.com/user-attachments/assets/955921b4-291a-4006-9d60-c26e42103c45)
+![Screenshot 2024-12-06 22 58 10](https://github.com/user-attachments/assets/6b02c497-6a42-4495-8279-ae00ed6e1c1d)
+![Screenshot 2024-12-06 22 58 33](https://github.com/user-attachments/assets/48f5bae0-8139-410c-bb39-440eacf1e83a)
+![Screenshot 2024-12-06 22 58 56](https://github.com/user-attachments/assets/85d6db10-fef3-4688-b1ba-fe6d01adc67e)
 
 <strong>Features of Domain Marketplace:</strong>
 
-![Screenshot 2024-11-20 18 37 30](https://github.com/user-attachments/assets/cfa424db-4366-442c-8b3d-709ab11c2a6b)
-![Screenshot 2024-11-20 18 38 38](https://github.com/user-attachments/assets/4575e77a-af29-43a9-8990-66989ff2a6b4)
-![Screenshot 2024-11-20 18 39 15](https://github.com/user-attachments/assets/9a17711d-4a5e-4d77-9df6-aff552ed45d1)
-![Screenshot 2024-11-20 18 39 39](https://github.com/user-attachments/assets/2a56bc9e-8df8-4ef7-92cc-79ff98257d7d)
-![Screenshot 2024-11-20 18 39 54](https://github.com/user-attachments/assets/d1c047e6-7605-4de2-9a0e-bf198d7dcf9f)
-![Screenshot 2024-11-20 18 40 43](https://github.com/user-attachments/assets/88f96cd6-7357-4984-b84e-bbfe59ec654e)
+![Screenshot 2024-12-06 22 55 51](https://github.com/user-attachments/assets/9b91db6b-7c3d-4362-ae9d-5814806bf008)
+![Screenshot 2024-12-06 22 56 07](https://github.com/user-attachments/assets/99b7b0da-716c-4ebd-a1ab-63de68247914)
+![Screenshot 2024-12-06 22 57 09](https://github.com/user-attachments/assets/a2b6ca16-bcf1-4fbc-b590-69f539667a56)
+![Screenshot 2024-12-06 22 57 26](https://github.com/user-attachments/assets/1afc0bfe-1985-4001-b2ec-3f207f638ccf)
 
 <ul>
-    <li>Built with Bootstrap 5 and Tailwind CSS (for the user dashboard)</li>
+    <li>Built with Tailwind CSS (for the user and admindashboard)</li>
     <li>Domain buyers can easily search and find brand names to buy</li>
     <li>Buyers can find domain names based on various industries</li>
+    <li>Paystack payment integration</li>
     <li>Sellers can easily create an account and add a domain name</li>
     <li>Sellers can seamlessly search and filter domains with the help of LiveWire</li>
     <li>Sellers can set a fixed price for thier domain along with other parameters</li>
@@ -29,4 +25,8 @@ Domain Marketplace is a Laravel and LiveWire Web Application that allows domain 
     <li>The dashboard comes with dark mode compatibility</li>
 </ul>
 
-<strong>PS: Some features like payment gateway, admin panel, and domain verification was intentionally removed</strong>
+<strong>Admin Dashboard (Dark theme available)</strong>
+
+![Screenshot 2024-12-06 22 53 26](https://github.com/user-attachments/assets/156a265e-3747-4d01-9d51-bc01163b7995)
+![Screenshot 2024-12-06 22 55 01](https://github.com/user-attachments/assets/c0ce01a7-94b6-4e52-b17c-0b74c31b6833)
+
