@@ -87,6 +87,26 @@ Add Domain
 
 </div>
 
+@if (session('status') ==="updated")
+<p
+x-data="{ show: true }"
+x-show="show"
+x-transition
+x-init="setTimeout(() => show = false, 2000)"
+class="text-sm text-green-600 dark:text-green-600 text-center"
+>{{ __('Domain Updated.') }}</p>
+@endif
+
+@if (session('status') ==="deleted")
+<p
+x-data="{ show: true }"
+x-show="show"
+x-transition
+x-init="setTimeout(() => show = false, 2000)"
+class="text-sm text-red-600 dark:text-red-600 text-center"
+>{{ __('Domain Deleted.') }}</p>
+@endif
+
 <div class="overflow-x-auto">
 
 <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
@@ -100,8 +120,9 @@ Add Domain
 <tr>
 
 <th scope="col" class="px-6 py-4">Domain</th>
-<th scope="col" class="px-6 py-4">Setup</th>
+<th scope="col" class="px-6 py-4">Status</th>
 <th scope="col" class="px-6 py-4">Price</th>
+<th scope="col" class="px-6 py-4">Creation</th>
 <th scope="col" class="px-6 py-4">Actions</th>
 
 </tr>
@@ -131,6 +152,8 @@ Add Domain
 </td>
 
 <td class="whitespace-nowrap px-6 py-4">&#8358;{{ number_format($domain->price) }}</td>
+
+<td class="whitespace-nowrap px-6 py-4">{{ $domain->created_at }}</td>
 
 <td class="whitespace-nowrap px-6 py-4 flex flex-row gap-3">
 

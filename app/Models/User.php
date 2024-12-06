@@ -24,6 +24,7 @@ class User extends Authenticatable
         'bank_name',
         'bank_acc',
         'status',
+        'is_admin',
         'password',
     ];
 

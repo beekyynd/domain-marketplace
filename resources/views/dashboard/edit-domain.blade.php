@@ -4,11 +4,17 @@
   
 <x-slot name="header">
 
-<h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+<h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight mb-3">
 
-{{ __('Finish the setup of ') }} <i>{{$domain->url}}</i>
+{{ __('Finish the setup of ') }} {{$domain->url}}
 
 </h2>
+
+<span class="font-semibold text-md text-red-600 dark:text-red-600 leading-tight mt-3">
+
+  <i>{{ __('NOTICE: Ideas will be generated automatically') }}</i>
+  
+</span>
 
 </x-slot>
 
@@ -22,7 +28,7 @@ Parent container
 
 <!-- Ownership verification -->
 
-<div class="container mt-6 mx-auto rounded-lg bg-white shadow-lg dark:bg-gray-700 dark:text-white text-surface">
+<div class="container mt-6 mx-auto rounded-lg bg-white shadow-lg dark:bg-neutral-900 dark:text-white text-surface">
 
 <div class="border-b-2 border-neutral-100 px-6 py-3 dark:border-white/10">
 
@@ -44,7 +50,7 @@ Configure Nameservers
 
 <div class="flex justify-center">
 
-<button type="submit" class="px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-900 focus:ring-indigo-500 transition ease-in-out duration-150">
+<button type="submit" class="px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-neutral-900 focus:ring-indigo-500 transition ease-in-out duration-150">
 
 Verify
 
@@ -56,7 +62,7 @@ Verify
 </div>
 
 @if ($errors->any())
-<div class="bg-gray-100 dark:bg-gray-800 text-red-600">
+<div class="bg-neutral-100 dark:bg-neutral-800 text-red-600">
 <ul>
 @foreach ($errors->all() as $error)
 <li>{{ $error }}</li>
@@ -72,7 +78,7 @@ Verify
 
 <!-- Tags -->
 
-<div class="container mt-6 mx-auto rounded-lg bg-white shadow-lg dark:bg-gray-700 dark:text-white text-surface">
+<div class="container mt-6 mx-auto rounded-lg bg-white shadow-lg dark:bg-neutral-900 dark:text-white text-surface">
 
 <div class="border-b-2 border-neutral-100 px-6 py-3 dark:border-white/10">
 
@@ -98,7 +104,7 @@ Choose between 1 to 3 <strong>industries</strong> for this domain. These help yo
 
   @foreach ($keys as $k)
 
-  <span class="text-blue-800 bg-blue-300 px-2 py-1 rounded-lg tiny-text">{{$k}}</span>
+  <span class="text-green-800 bg-green-300 px-2 py-1 rounded-lg tiny-text">{{$k}}</span>
     
   @endforeach
 
@@ -281,7 +287,7 @@ Shopping
 
 <!-- Logo upload -->
 
-<div class="container mt-6 mx-auto rounded-lg bg-white shadow-lg dark:bg-gray-700 dark:text-white text-surface">
+<div class="container mt-6 mx-auto rounded-lg bg-white shadow-lg dark:bg-neutral-900 dark:text-white text-surface">
 
 <div class="border-b-2 border-neutral-100 px-6 py-3 dark:border-white/10">
 
@@ -299,7 +305,9 @@ id="formFile" />
 
 <div id="file-info" class="mt-3">
 
-<h6>Current Logo</h6>        
+<h6>Current Logo</h6>
+
+<img src="{{asset('storage')}}/{{ $domain->logo_url }}" class="mt-2 w-32 h-32"/>
 
 </div>
 </div>
@@ -315,7 +323,7 @@ Grid layout
 
 <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 content-start py-6">
 
-<div class="mt-6 rounded-lg bg-white shadow-lg dark:bg-gray-700 dark:text-white text-surface">
+<div class="mt-6 rounded-lg bg-white shadow-lg dark:bg-neutral-900 dark:text-white text-surface">
 
 <div class="border-b-2 border-neutral-100 px-6 py-3 dark:border-white/10">
 
@@ -339,7 +347,7 @@ Keywords <span class="red-text text-sm">*required</span>
 
   @foreach ($keys as $k)
 
-  <span class="text-blue-800 bg-blue-300 px-2 py-1 rounded-lg tiny-text">{{$k}}</span>
+  <span class="text-green-800 bg-green-300 px-2 py-1 rounded-lg tiny-text">{{$k}}</span>
     
   @endforeach
 
@@ -356,7 +364,7 @@ class="w-full border-gray-300 text-gray-800 focus:border-indigo-500 focus:ring-i
 
 <!-- Pricing -->
 
-<div class="mt-6 rounded-lg bg-white shadow-lg dark:bg-gray-700 dark:text-white text-surface">
+<div class="mt-6 rounded-lg bg-white shadow-lg dark:bg-neutral-900 dark:text-white text-surface">
 
 <div class="border-b-2 border-neutral-100 px-6 py-3 dark:border-white/10">
 
@@ -373,7 +381,7 @@ Price (&#8358;)
     @if ($domain->price !="")
 
 <input type="text" name="price" id="price" value="&#8358;{{number_format($domain->price)}}" 
-class="w-full border-gray-300 bg-gray-100 dark:bg-gray-500 text-gray-800 dark:text-gray-200 rounded-md shadow-sm" disabled> 
+class="w-full border-gray-300 bg-neutral-100 dark:bg-neutral-500 text-gray-800 dark:text-gray-200 rounded-md shadow-sm" disabled> 
 
 @else
 
@@ -390,7 +398,7 @@ class="w-full border-gray-300 bg-gray-100 dark:bg-gray-500 text-gray-800 dark:te
 
 <div class="flex justify-center">
 
-<button type="submit" class="px-4 mt-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-800 focus:ring-indigo-500 transition ease-in-out duration-150">
+<button type="submit" class="px-4 mt-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-neutral-800 focus:ring-indigo-500 transition ease-in-out duration-150">
 
 Save Changes
 
@@ -400,13 +408,7 @@ Save Changes
 
 </form>
 
-
-
 <!-- End all divs -->
-
-</div>
-</div>
-</div>
 
 </div>
 

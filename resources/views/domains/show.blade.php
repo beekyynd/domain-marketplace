@@ -72,13 +72,15 @@
 
 </div>
 
-<form method="POST" action="pay.php">
+<form method="POST" action="{{ route('payment') }}">
+
+  @csrf
 
 <input class="form-control-2 mx-auto" type="email" name="email" placeholder="Enter your email" required>
 
-<input type="number" name="price" value="{{$domain->price}}" hidden>
+<input type="number" name="amount" value="{{$domain->price}}" hidden>
 
-<input type="number" name="id" value="{{$domain->domain_id}}" hidden>
+<input type="number" name="domain_id" value="{{$domain->domain_id}}" hidden>
 
 <button class="btn btn-dark btn-more no-rad btn-class mx-auto mt-3 p-3" type="submit">Continue to payment <i class="fa fa-arrow-right"></i></button>
 
@@ -87,14 +89,6 @@
 <div class="mt-5 mb-2">
 
 <img src="{{asset('images/paystack.png')}}" class="paystack-image">
-
-</div>
-
-<div class="ask-us p-3 mt-1">
-
-<span class="text-muted f-size-16">Listed by:</span>
-
-<span><strong><a href="sellers.php?p_url=" class="text-main-color"></a></strong></span>
 
 </div>
 
@@ -187,7 +181,7 @@
 
 <div class="col-lg-8 col-md-12 col-sm-12 mt-2 d-details">
 
-<strong><h4 class="text-ideas">About {{$domain->url}}</h4></strong>
+<strong><h4 class="text-ideas">Ideas for {{$domain->url}}</h4></strong>
 
 <div class="ideas">
 

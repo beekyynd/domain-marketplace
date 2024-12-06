@@ -16,9 +16,9 @@
 
 <ul class="c-list">
 
-<li><a href="#" class="text-muted">Create an account</a></li>
+<li><a href="{{route('register')}}" class="text-muted">Create an account</a></li>
 
-<li><a href="#" class="text-muted">Login</a></li>
+<li><a href="{{route('login')}}" class="text-muted">Login</a></li>
 
 </ul>
 
@@ -32,11 +32,11 @@
 
 <ul class="c-list">
 
-<li><a href="#" class="text-muted">About us</a></li>
+<li><a href="{{route('about')}}" class="text-muted">About us</a></li>
 
-<li><a href="#" class="text-muted">Contact us</a></li>
+<li><a href="{{route('contact')}}" class="text-muted">Contact us</a></li>
 
-<li><a href="#" class="text-muted">FAQs</a></li>
+<li><a href="{{route('faqs')}}" class="text-muted">FAQs</a></li>
 
 </ul>
 
@@ -50,15 +50,15 @@
 
 <ul class="c-list">
 
-<li><a href="#" class="text-muted">Refund policy</a></li>
+<li><a href="{{route('refund')}}" class="text-muted">Refund policy</a></li>
 
-<li><a href="#" class="text-muted">Terms of Use</a></li>
+<li><a href="{{route('terms')}}" class="text-muted">Terms of Use</a></li>
 
-<li><a href="#" class="text-muted">Sellers Terms of Use</a></li>
+<li><a href="{{route('seller-terms')}}" class="text-muted">Sellers Terms of Use</a></li>
 
-<li><a href="#" class="text-muted">Buyers Terms of Use</a></li>
+<li><a href="{{route('buyer-terms')}}" class="text-muted">Buyers Terms of Use</a></li>
 
-<li><a href="#" class="text-muted">Privacy Policy</a></li>
+<li><a href="{{route('privacy')}}" class="text-muted">Privacy Policy</a></li>
 
 </ul>
 

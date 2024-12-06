@@ -14,9 +14,9 @@ class Industries extends Controller
     public function show($tag)
     {
 
-        $domains = Domain::where('tags', 'like', '%' . $tag . '%')->get(); 
+        $domains = Domain::where('tags', 'like', '%' . $tag . '%')->where('status', 'available')->get(); 
 
-        $count = Domain::where('tags', 'like', '%' . $tag . '%')->count(); 
+        $count = Domain::where('tags', 'like', '%' . $tag . '%')->where('status', 'available')->count(); 
 
         return view('domains.industries', compact('domains', 'tag', 'count'));
 

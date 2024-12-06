@@ -10,6 +10,8 @@ use App\Http\Requests\StoreDomainRequest;
 
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Storage;
+
 class DomainController extends Controller
 {
     /**
@@ -19,7 +21,7 @@ class DomainController extends Controller
 
     {
        
-        $domains = Domain::all(); 
+        $domains = Domain::where('status','available')->get(); 
  
         return view('index', compact('domains'));
 
@@ -77,6 +79,32 @@ class DomainController extends Controller
     }
 
     /**
+     * Browse domains
+     */
+
+     public function browse()
+
+     {
+ 
+         // filter based on user selection
+ 
+         if (request('type') ==="short" || request('type') ==="premium" || request('type') ==="all") {
+
+             $domains = Domain::where('status','available')->get(); 
+
+         }
+
+         else {
+
+            abort(403);
+         }
+  
+         return view('domains.browse-domains', compact('domains'));
+ 
+     }
+ 
+
+    /**
      * Display domains from search
      */
 
@@ -100,7 +128,7 @@ class DomainController extends Controller
          
          );
  
-         $domains = Domain::where('url', 'like', '%' . $search . '%')->get(); 
+         $domains = Domain::where('url', 'like', '%' . $search . '%')->where('status', 'available')->get(); 
  
          return view('domains.search', compact('domains', 'search'));
  
@@ -138,17 +166,64 @@ class DomainController extends Controller
 
         $update = Domain::where('url', $domain->url);
 
-        $tags = $domain->tags;
-
         $keywords = $request->input('keywords');
 
-        $logo = $request->input('logo');
+        $key = config('services.gpt.key');
+
+        $api_url = "https://api.openai.com/v1/chat/completions";
+
+$headers = array(
+
+    "Content-Type: application/json",
+    "Authorization: Bearer $key"
+);
+
+$data = array(
+
+    "model" => "gpt-3.5-turbo",
+    "messages" => array(
+        array("role" => "system", "content" => "You are an assistant who speaks English."),
+        array("role" => "user", "content" => "Give me 2 best uses for the domain name $domain->url in a numbered list, formatted in HTML. Each list should have at minimum of 100 words and do not use the word lastly in the final list. Immediately begin with the list and nothing else. Use line breaks and each heading should be bolded. It must be formatted in HTML")
+    )
+);
+
+$ch = curl_init($api_url);
+
+curl_setopt($ch, CURLOPT_POST, 1);
+
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+
+curl_close($ch);
+
+$result = json_decode($response, true);
+
+
+        $request->validate([
+
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        if($domain->ideas !="") {
+
+            $idea = $domain->ideas;
+    
+            }
+    
+            else {
+    
+            $idea = $result['choices'][0]['message']['content'];
+    
+            }
 
         if($domain->price !="") {
 
         $price = $domain->price;
-
-        $commission = $domain->commission;
 
         }
 
@@ -156,29 +231,52 @@ class DomainController extends Controller
 
         $price = $request->input('price');
 
-        $commission = 0.1 * $price;
-
         }
 
         if(!empty($request->input('tag'))) {
 
             $tags = implode(",", $request->input('tag'));
+
         }
 
-        if($request->input('logo') ==="") {
+        else {
 
-            $logo = $domain->logo_url;
+            $tags = $domain->tags;
+        }
+
+        // Check if a new logo file is uploaded
+
+        if ($request->hasFile('logo')) {
+
+            // Delete the old logo if it exists (optional)
+
+            if ($domain->logo_url && Storage::exists($domain->logo_url)) {
+
+                Storage::delete($domain->logo_url);
+            }
+
+            // Store the new logo and get its path
+
+            $logoPath = $request->file('logo')->store('domains', 'public');
+
+            // Update the domain logo with the new path
+
+        }
+
+        else {
+
+            $logoPath = $domain->logo_url;
         }
 
         $update->update([
             'tags' => $tags,
             'keywords' => $keywords,
             'price' => $price,
-            'commission' => $commission,
-            'logo_url' => $logo,
+            'ideas' =>$idea,
+            'logo_url' => $logoPath,
         ]);
 
-        return redirect()->route('dashboard.domains')->with('success','Domain updated successfully'); 
+        return redirect()->route('dashboard.domains')->with('status','updated'); 
     
     }
 
@@ -199,6 +297,6 @@ class DomainController extends Controller
 
         $domain->delete();
  
-        return redirect()->route('dashboard.domains')->with('success','Domain deleted successfully');
+        return redirect()->route('dashboard.domains')->with('status','deleted');
     }
 }

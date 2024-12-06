@@ -240,7 +240,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 <!-- Industry box -->
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/agriculture">
 
@@ -256,7 +256,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/creativity">
 
@@ -272,7 +272,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/business">
 
@@ -288,7 +288,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/government">
 
@@ -304,7 +304,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/kids">
 
@@ -320,7 +320,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/health">
 
@@ -336,7 +336,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/finance">
 
@@ -352,7 +352,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/entertainment">
 
@@ -368,7 +368,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/marketing">
 
@@ -384,7 +384,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/social">
 
@@ -400,7 +400,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/media">
 
@@ -416,7 +416,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/technology">
 

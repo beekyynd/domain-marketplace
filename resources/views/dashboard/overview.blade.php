@@ -32,11 +32,11 @@
 
 @endphp
 
-<div class="grid bg-white dark:bg-gray-900 px-6 grid-cols-1 sm:grid-cols-2 gap-4 content-start mt-6 py-6">
+<div class="grid bg-white dark:bg-black px-6 grid-cols-1 sm:grid-cols-2 gap-4 content-start mt-6 py-6">
 
 <!-- Card -->
 
-<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-gray-800 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
+<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-neutral-900 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
 
 <h4 class="mb-3 text-base sm:text-lg">Domains for sale</h4>
 
@@ -48,7 +48,7 @@
 
 <!-- Card -->
 
-<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-gray-800 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
+<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-neutral-900 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
 
 <h4 class="mb-3 text-base sm:text-lg">Portfolio Value</h4>
 
@@ -60,7 +60,7 @@
 
 <!-- Card -->
 
-<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-gray-800 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
+<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-neutral-900 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
 
 <h4 class="mb-3 text-base sm:text-lg">Listed Domains</h4>
 
@@ -72,7 +72,7 @@
 
 <!-- Card -->
 
-<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-gray-800 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
+<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-neutral-900 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
 
 <h4 class="mb-3 text-base sm:text-lg">Unlisted Domains</h4>
 
@@ -84,7 +84,7 @@
 
 <!-- Card -->
 
-<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-gray-800 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
+<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-neutral-900 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
 
 <h4 class="mb-3 text-base sm:text-lg">Sold Domains</h4>
 
@@ -96,7 +96,7 @@
 
 <!-- Card -->
 
-<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-gray-800 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
+<div class='rounded-lg shadow-lg px-6 py-6 bg-white dark:bg-neutral-900 text-gray-800 dark:text-white text-2xl border-r border-r-8 border-r-gray-800 dark:border-r-gray-100'>
 
 <h4 class="mb-3 text-base sm:text-lg">Total Value of Sold Domains</h4>
 

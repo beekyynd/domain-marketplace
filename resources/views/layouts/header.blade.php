@@ -96,7 +96,7 @@ document.documentElement.scrollTop = 0; // CHROME, IE AND FIREFOX
 
 <li class="nav-item ms-3">
 
-<a class="nav-link" href="#">FAQs</a>
+<a class="nav-link" href="{{route('faqs')}}">FAQs</a>
 
 </li>
 

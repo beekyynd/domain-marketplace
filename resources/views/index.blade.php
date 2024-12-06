@@ -48,79 +48,22 @@
 
 <section class="sec-hot">
 
-<div class="container mb-2 mt-3">
+<div class="container mb-2 mt-3 text-center">
 
-<h4 class="hot-domains">Buy Domain Names in Easy Steps</h4>
+<h4 class="hot-domains bounce">We have the right tools for you</h4>
 
-<div class="row p-m-p">
+<span style="font-size: 16px">As a seller, your dashboard comes with many features that makes selling your brand names easy.</span>
+
+<div class="row row-40 p-m-p">
 
 <!-- Steps -->
 
-<div class="col-lg-6 col-md-12 col-sm-12">
+<div class="col-lg-12 col-md-12 col-sm-12 mb-3">
 
-<img src="{{ asset('images/online-girl.png') }}" class="before-steps mx-auto">
-
-</div>
-
-<div class="col-lg-6 col-md-12 col-sm-12">
-
-<div class="container">
-
-<div class="row">
-
- <div class="col-lg-6 col-md-3 col-sm-12 mb-2">
-
-<div class="sm-card">
-
-<i class="fa fa-search primary-c-text"></i>
-
-<h4 class="mt-2">Find your unique domain</h4>
-
-<p>Search for that perfect domain to mark your presence in the digital world</p>
+<img src="{{ asset('images/d-dash.png') }}" class="mt-2 before-steps mx-auto shadow-lg">
 
 </div>
- </div>
- 
- <div class="col-lg-6 col-md-3 col-sm-12 mb-2">
-
-<div class="sm-card">
-
-<span class="primary-c-text">&#8358;</span>
-
-<h4 class="mt-2">Make payment to secure it</h4>
-
-<p>You can pay using a debit card or bank transfer</p>
-
-</div>
- </div>
-
- <div class="col-lg-6 col-md-3 col-sm-12">
-
-<div class="sm-card">
-
-<i class="fa-regular fa-envelope primary-c-text"></i>
-
-<h4 class="mt-3">Wait for an agent to reach out</h4>
-
-<p>An support agent will contact you to begin domain transfer</p>
-
-</div>
- </div>
-
- <div class="col-lg-6 col-md-3 col-sm-12">
-
-<div class="sm-card">
-
-<i class="fa-regular fa-handshake primary-c-text"></i>
-
-<h4 class="mt-3">Transfer of ownership</h4>
-
-<p>Congrats! Your domain has been transferred to you</p>
-
-</div>
- </div>
- 
-
+  
 </div>
 </div>
 </div>
@@ -186,14 +129,6 @@
 
 </div>
 
-<!-- More domains button -->
-
-<a href="browse-domains.php">
-    
-    <button class="btn btn-dark btn-more p-3 no-rad mt-3 mx-auto">View More Popular Names 
-        
-    </button></a>
-
 <!-- Close Container and Row -->
 
 </div>
@@ -211,11 +146,19 @@
 
 <!-- Domain box -->
 
-@foreach ($domains as $domain )
+@foreach ($domains as $short )
+
+@php
+
+$nameWithoutExtension = explode('.', $short->url)[0]; // Get the part before the extension
+
+@endphp
+
+@if (strlen($nameWithoutExtension) < 7)
     
 <div class="col-lg-3 col-6">
 
-<a href="domains/{{$domain->url}}">
+<a href="domains/{{$short->url}}">
 
 <div class="name-box">
 
@@ -223,7 +166,7 @@
 
     <div class="logo-box">
 
-    <img src="/images/{{$domain->logo_url}}">
+    <img src="/images/{{$short->logo_url}}">
 
     </div>
 
@@ -231,9 +174,9 @@
 
     <div class="w-100 text-center">
 
-<h6 class="domain-text text-center">{{$domain->url}}</h6>
+<h6 class="domain-text text-center">{{$short->url}}</h6>
 
-<h6 class="domain-price text-center">&#8358;{{number_format($domain->price)}}</h6>
+<h6 class="domain-price text-center">&#8358;{{number_format($short->price)}}</h6>
 
     </div>
 
@@ -247,13 +190,15 @@
 
 </div>
 
+@endif
+
 @endforeach
 
 </div>
 
 <!-- More domains button -->
 
-<a href="browse-domains.php?type=short">
+<a href="{{route('domain.browse')}}?type=short">
   
   <button class="btn btn-outline-dark btn-more no-rad p-3 mt-3 mx-auto">View More Short Names</button></a>
 
@@ -277,11 +222,13 @@
 
 <!-- Domain box -->
 
-@foreach ($domains as $domain )
+@foreach ($domains as $premium)
+
+@if ($premium->price > 100000)
     
 <div class="col-lg-3 col-6">
 
-<a href="domains/{{$domain->url}}">
+<a href="domains/{{$premium->url}}">
 
 <div class="name-box">
 
@@ -289,7 +236,7 @@
 
     <div class="logo-box">
 
-    <img src="/images/{{$domain->logo_url}}">
+    <img src="/images/{{$premium->logo_url}}">
 
     </div>
 
@@ -297,9 +244,9 @@
 
     <div class="w-100 text-center">
 
-<h6 class="domain-text text-center">{{$domain->url}}</h6>
+<h6 class="domain-text text-center">{{$premium->url}}</h6>
 
-<h6 class="domain-price text-center">&#8358;{{number_format($domain->price)}}</h6>
+<h6 class="domain-price text-center">&#8358;{{number_format($premium->price)}}</h6>
 
     </div>
 
@@ -313,13 +260,15 @@
 
 </div>
 
+@endif
+
 @endforeach
 
 </div>
 
 <!-- More domains button -->
 
-<a href="browse-domains.php"><button class="btn btn-outline-dark p-3 btn-more no-rad mt-3 mx-auto">View More Premium Names 
+<a href="{{ route('domain.browse') }}?type=premium"><button class="btn btn-outline-dark p-3 btn-more no-rad mt-3 mx-auto">View More Premium Names 
   </button></a>
 
 </div>
@@ -402,7 +351,7 @@
 
 <!-- Industry box -->
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/agriculture">
 
@@ -418,7 +367,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/creativity">
 
@@ -434,7 +383,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/business">
 
@@ -450,7 +399,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/government">
 
@@ -466,7 +415,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/kids">
 
@@ -482,7 +431,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/health">
 
@@ -498,7 +447,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/finance">
 
@@ -514,7 +463,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/entertainment">
 
@@ -530,7 +479,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/marketing">
 
@@ -546,7 +495,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/social">
 
@@ -562,7 +511,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/media">
 
@@ -578,7 +527,7 @@
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="industry/technology">
 

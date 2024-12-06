@@ -28,6 +28,21 @@ return [
         'key' => env('RESEND_KEY'),
     ],
 
+    // Other services...
+
+    'paystack' => [
+        'key' => env('PAYSTACK_KEY'),
+    ],
+
+    'whois' => [
+        'key' => env('WHOIS_KEY'),
+    ],
+
+    'gpt' => [
+
+        'key' => env('GPT_KEY'),
+    ],
+
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),

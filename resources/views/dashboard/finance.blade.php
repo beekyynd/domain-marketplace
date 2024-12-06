@@ -12,15 +12,7 @@
 
 @else
 
-{{ __('Money you have made from domain sales minus commisions will be shown here') }}
-
-<ul class="text-gray-500 dark:text-gray-400 mt-3">
-
-<li>10% commision on all sales under &#8358;10,000,000</li>
-
-<li>5% commision on all sales over &#8358;10,000,000</li>
-
-</ul>
+{{ __('Money you have made from domain sales will be shown here') }}
 
 @endif
 
@@ -76,7 +68,7 @@
 
 <tr class="border-b border-neutral-200 dark:border-white/10">
 
-<td class="whitespace-nowrap px-6 py-4 font-medium">{{ $result->date }}</td>
+<td class="whitespace-nowrap px-6 py-4 font-medium">{{ $result->created_at }}</td>
 
 <td class="whitespace-nowrap px-6 py-4">
 

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Earning extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['status', 'reference', 'amount', 'description', 'owner_id'];
 }

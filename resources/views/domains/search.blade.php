@@ -236,7 +236,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 <!-- Industry box -->
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/agriculture">
 
@@ -252,7 +252,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/creativity">
 
@@ -268,7 +268,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/business">
 
@@ -284,7 +284,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/government">
 
@@ -300,7 +300,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/kids">
 
@@ -316,7 +316,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/health">
 
@@ -332,7 +332,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/finance">
 
@@ -348,7 +348,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/entertainment">
 
@@ -364,7 +364,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/marketing">
 
@@ -380,7 +380,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/social">
 
@@ -396,7 +396,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/media">
 
@@ -412,7 +412,7 @@ After paying for a domain, we will not charge you for anything else. However, th
 
 </div>
 
-<div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+<div class="col-lg-2 col-6 mb-2">
 
 <a href="{{route('index')}}/industry/technology">
 
@@ -435,63 +435,5 @@ After paying for a domain, we will not charge you for anything else. However, th
 </div>
 
 </section>
-
-<script>
-
-$(document).ready(function() {
-
-$('#price_filter').on('click', function() {
-
-    var from_price = $('#from_price').val();
-
-    if(from_price ==="") {
-
-        var from_price = 0;
-
-    }
-
-var to_price = $('#to_price').val();
-
-if(Number(from_price) > Number(to_price)) {
-
-    alert("Minimum price must be less than maximum price");
-
-}
-
-else {
-
-$.ajax({
-
-  url: "price_filter.php",
-
-  type: "GET",
-
-  data: "from="+from_price+'&to='+to_price,
-
-  success: function(html) {
-
-    $('#show_filter').html(html);
-
-  }
-})
-
-}
-
-})
-
-});
-
-$(document).ready(function() {
-
-$('#remove_filter').on('click', function() {
-
-    location.reload();
-
-})
-
-});
-
-
-</script>
 
 @include('layouts.footer')
