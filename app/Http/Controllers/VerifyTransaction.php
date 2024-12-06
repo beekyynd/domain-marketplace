@@ -18,7 +18,7 @@ class VerifyTransaction extends Controller
 {
     
     /**
-     * Verify transaction
+     * Verify payment transaction
      */
 
     public function verifyTx(Request $request)
