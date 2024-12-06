@@ -101,7 +101,7 @@
 
     <div class="logo-box">
 
-    <img src="/images/{{$domain->logo_url}}">
+    <img src="{{asset('storage')}}/{{ $domain->logo_url }}">
 
     </div>
 
@@ -166,7 +166,7 @@ $nameWithoutExtension = explode('.', $short->url)[0]; // Get the part before the
 
     <div class="logo-box">
 
-    <img src="/images/{{$short->logo_url}}">
+    <img src="{{asset('storage')}}/{{ $short->logo_url }}">
 
     </div>
 
@@ -236,7 +236,7 @@ $nameWithoutExtension = explode('.', $short->url)[0]; // Get the part before the
 
     <div class="logo-box">
 
-    <img src="/images/{{$premium->logo_url}}">
+    <img src="{{asset('storage')}}/{{ $premium->logo_url }}">
 
     </div>
 

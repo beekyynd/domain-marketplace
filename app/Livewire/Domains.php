@@ -18,7 +18,7 @@ class Domains extends Component
     public function render()
     {
         
-        $domains = Domain::when($this->filter !=="", function($query) {
+        $domains = Domain::where('id', Auth::id())->when($this->filter !=="", function($query) {
             
             $query->where('id', Auth::id())->where('status', $this->filter);
         
