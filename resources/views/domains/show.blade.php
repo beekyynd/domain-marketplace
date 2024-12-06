@@ -42,7 +42,7 @@
 
 @else
 
-<img class="di-b shadow-sm" src="{{asset('storage')}}/{{ $domain->logo_url }}">
+<img class="di-b shadow-sm" src="{{asset('public/storage')}}/{{ $domain->logo_url }}">
 
 <input id="get-like" value="{{$domain->domain_id}}" hidden>
 

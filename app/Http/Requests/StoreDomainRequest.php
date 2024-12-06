@@ -24,7 +24,7 @@ class StoreDomainRequest extends FormRequest
         return [
 
             'url' => ['required', 'string', 'max:20'],
-            'id' => ['required', 'integer', 'max:5'],
+            'id' => ['required', 'integer', 'max:20'],
             
         ];
     }

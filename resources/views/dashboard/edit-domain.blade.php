@@ -307,7 +307,7 @@ id="formFile" />
 
 <h6>Current Logo</h6>
 
-<img src="{{asset('storage')}}/{{ $domain->logo_url }}" class="mt-2 w-32 h-32"/>
+<img src="{{asset('public/storage')}}/{{ $domain->logo_url }}" class="mt-2 w-32 h-32"/>
 
 </div>
 </div>

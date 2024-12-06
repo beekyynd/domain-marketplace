@@ -44,7 +44,7 @@
 
     <div class="logo-box">
 
-    <img src="{{asset('images')}}/{{ $result->logo_url }}">
+    <img src="{{asset('public/storage')}}/{{ $result->logo_url }}">
 
     </div>
 
