@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Actions\Action;
 
+
 class PayoutResource extends Resource
 {
     protected static ?string $model = Payout::class;

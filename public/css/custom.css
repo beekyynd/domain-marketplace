@@ -1177,9 +1177,9 @@ line-height: 60px;
 
   .before-steps {
 
-    width: auto !important;
+    width: 330px !important;
 
-    height: 300px !important;
+    height: 180px !important;
 
     animation: bounce 2s infinite;
 
@@ -1353,6 +1353,8 @@ line-height: 60px;
   background: #fff;
 
   width: 98%;
+  
+  height: 210px;
 
   box-shadow: rgb(100 100 111 / .2) 0 7px 29px 0;
   
