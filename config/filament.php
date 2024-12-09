@@ -108,6 +108,4 @@ return [
     'Dashboard' => App\Filament\Pages\Dashboard::class,
 ],
 
-'home_url' => '/admin/dashboa',
-
 ];

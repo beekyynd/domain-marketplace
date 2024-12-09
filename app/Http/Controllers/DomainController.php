@@ -50,7 +50,7 @@ class DomainController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created domain
      */
     public function store(StoreDomainRequest $request)
     {

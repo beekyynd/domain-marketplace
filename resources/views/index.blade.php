@@ -75,6 +75,8 @@
 
 </section>
 
+{{--
+
 <!-- Domain box -->
 
 <section class="sec-hot-2">
@@ -274,6 +276,8 @@ $nameWithoutExtension = explode('.', $short->url)[0]; // Get the part before the
 </div>
 
 </section>
+
+--}}
 
 <!-- Sellers Hero -->
 

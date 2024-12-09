@@ -62,7 +62,7 @@ $nameWithoutExtension = explode('.', $short->url)[0]; // Get the part before the
 
 <div class="col-lg-3 col-md-3 col-6">
 
-<a href="">
+<a href="{{route('index')}}/{{$short->url}}">
 
 <div class="name-box">
 
@@ -110,7 +110,7 @@ $nameWithoutExtension = explode('.', $short->url)[0]; // Get the part before the
 
 <div class="col-lg-3 col-md-3 col-6">
 
-<a href="">
+<a href="{{route('index')}}/{{$premium->url}}">
 
 <div class="name-box">
 
@@ -157,7 +157,7 @@ $nameWithoutExtension = explode('.', $short->url)[0]; // Get the part before the
 
 <div class="col-lg-3 col-md-3 col-6">
 
-<a href="">
+<a href="{{route('index')}}/{{$all->url}}">
 
 <div class="name-box">
 

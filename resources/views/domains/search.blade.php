@@ -36,7 +36,7 @@
 
 <div class="col-lg-3 col-md-3 col-6">
 
-<a href="">
+<a href="{{route('index')}}/{{$result->url}}">
 
 <div class="name-box">
 
