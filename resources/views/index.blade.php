@@ -11,7 +11,7 @@
 
 <div class="to-green-content mx-auto">
 
-<h3 class="mt-3 mb-3 text-center">Find the right domain suited for your brand</h3>
+<h3 class="mt-3 mb-3 text-center">Find the right domain name for your brand</h3>
 
 <h6 class="mt-3 mb-3">Put Nigeria's largest domain marketplace to work for you! Explore our collection of quality domain names.</h6>
 
