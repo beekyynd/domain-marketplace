@@ -12,7 +12,7 @@
 
 <h3 class="mt-3 mb-3 text-center">Find the best <span class="text-capitalize text-light">{{ $tag }}</span> domain for your brand</h3>
 
-<h6 class="mt-3 mb-3">Here, you will find all domain names listed under the <span class="text-capitalize">{{ $tag }}</span> industry that you can use to claim your space in the digital world</h6>
+<h6 class="mt-3 mb-3">Here, you will find domain names listed under the <span class="text-capitalize">{{ $tag }}</span> industry that you can use to claim your space in the digital world</h6>
 
 </div>
 
